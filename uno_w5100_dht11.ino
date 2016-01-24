@@ -1,3 +1,8 @@
+// exemplo de como utilizar um Arduino Uno, um DHT11 e um ethernet shield w5100 (generico)
+// Utilizei como exemplo inicial codigo que encontrei no site da sparkfun
+
+
+
 /*****************************************************************
 Phant_Ethernet.ino
 Post data to SparkFun's data stream server system (phant) using
@@ -105,8 +110,8 @@ EthernetClient client;
 // Phant Stuff //
 /////////////////
 
-const String publicKey = "JxlYAKNED9hrMlGMWDQ4";     //minha chave publica, "endereço"
-const String privateKey = "gzdomN5pVeUoBvNBdgM2";     //minha chave privada, "senha"
+const String publicKey = "COLOQUE_SUA_CHAVE_PUBLICA_AQUI";     //minha chave publica, "endereço"
+const String privateKey = "COLOQUE_SUA_CHAVE_PRIVADA_AQUI";     //minha chave privada, "senha"
 const byte NUM_FIELDS = 2;  //quantidade de campos
 const String fieldNames[NUM_FIELDS] = {"umidade" , "temperatura"};  //o nome dos campos que serão publicados
 String fieldData[NUM_FIELDS];
