@@ -1,1 +1,1 @@
-//usando um arduino uno, tintsine gsm shield e um dht11 
+//usando um arduino uno, tinysine gsm shield e um dht11 
