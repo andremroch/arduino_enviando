@@ -1,4 +1,4 @@
-// exemplo de como utilizar um Arduino Uno, um DHT11 e um ethernet shield w5100 (generico)
+// exemplo de como utilizar um Arduino Uno, um DHT11 e um ethernet shield w5100
 // Utilizei como exemplo inicial codigo que encontrei no site da sparkfun
 
 
