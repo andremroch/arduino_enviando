@@ -97,6 +97,7 @@ void save_value(String value)
   ShowSerialData();
   mySerial.println("Content-Type: application/json");
   delay(100);
+  
   ShowSerialData();
   mySerial.println("Content-Length: "+le);
   delay(100);
