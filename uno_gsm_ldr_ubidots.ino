@@ -67,26 +67,26 @@ void save_value(String value)
   le = String(num);
   for(int i = 0;i<7;i++)
   {
-    mySerial.println("AT+CGATT?");               //this is made repeatedly because it is unstable
+    mySerial.println("AT+CGATT?");               //this is made repeatedly because it is unstable  Não mudei
     delay(2000);
     ShowSerialData();
   }
-  mySerial.println("AT+CSTT=\"tim.br\"");           //replace with your providers' APN
+  mySerial.println("AT+CSTT=\"tim.br\"");           // TIM
   delay(1000);
   ShowSerialData();
-  mySerial.println("AT+CIICR");                                                      //bring up wireless connection
+  mySerial.println("AT+CIICR");                                                      //bring up wireless connection  Não mudei
   delay(3000);
   ShowSerialData();
-  mySerial.println("AT+CIFSR");                                                      //get local IP adress
+  mySerial.println("AT+CIFSR");                                                      //get local IP adress  Não mudei
   delay(2000);
   ShowSerialData();
   mySerial.println("AT+CIPSPRT=0");
   delay(3000);
   ShowSerialData();
-  mySerial.println("AT+CIPSTART=\"tcp\",\"things.ubidots.com\",\"80\"");             //start up the connection
+  mySerial.println("AT+CIPSTART=\"tcp\",\"things.ubidots.com\",\"80\"");             //start up the connection Não mudei
   delay(3000);
   ShowSerialData();
-  mySerial.println("AT+CIPSEND");                                                    //begin send data to remote server
+  mySerial.println("AT+CIPSEND");                                                    //begin send data to remote server Não mudei
   delay(3000);
   ShowSerialData();
   mySerial.print("POST /api/v1.6/variables/"+idvariable);
@@ -108,7 +108,7 @@ void save_value(String value)
   mySerial.println(token);
   delay(100);
   ShowSerialData();
-  mySerial.println("Host: things.ubidots.com");
+  mySerial.println("Host: things.ubidots.com");       
   delay(100);
   ShowSerialData();
   mySerial.println();
@@ -124,7 +124,7 @@ void save_value(String value)
   delay(7000);
   mySerial.println();
   ShowSerialData();
-  mySerial.println("AT+CIPCLOSE");                                                //close the communication
+  mySerial.println("AT+CIPCLOSE");                                                //close the communication Não mudei
   delay(1000);
   ShowSerialData();
 }
