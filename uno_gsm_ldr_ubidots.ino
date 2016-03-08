@@ -23,7 +23,7 @@
 //--------------------------------------------------------------
 #include <SoftwareSerial.h>
 //#include <String.h>
-SoftwareSerial mySerial(2, 3);                                                      //your pins to serial communication
+SoftwareSerial mySerial(2, 3);                                                      //jumper no shield
 int value;
 //-------------------------------------------------------------
 //---------------------Ubidots Configuration-------------------
@@ -31,12 +31,12 @@ int value;
 
 
 
-String token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";             //token para enviar os valores "senha"
+String token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";             //token para enviar os valores "senha" do dispositivo
 
 
 
 
-String idvariable = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";       //ID da variavel
+String idvariable = "xxxxxxxxxxxxxxxxxxxxxxxxxx";       //ID da variavel
 
 
 
@@ -74,13 +74,13 @@ void save_value(String value)
   mySerial.println("AT+CSTT=\"tim.br\"");           // TIM
   delay(1000);
   ShowSerialData();
-  mySerial.println("AT+CIICR");                                                      //bring up wireless connection  Não mudei
+  mySerial.println("AT+CIICR");                                    //bring up wireless connection  Não mudei
   delay(3000);
   ShowSerialData();
-  mySerial.println("AT+CIFSR");                                                      //get local IP adress  Não mudei
+  mySerial.println("AT+CIFSR");                                    //get local IP adress  Não mudei
   delay(2000);
   ShowSerialData();
-  mySerial.println("AT+CIPSPRT=0");
+  mySerial.println("AT+CIPSPRT=0");                    // significa oq???????
   delay(3000);
   ShowSerialData();
   mySerial.println("AT+CIPSTART=\"tcp\",\"things.ubidots.com\",\"80\"");             //start up the connection Não mudei
